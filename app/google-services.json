@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "551868510150",
+    "firebase_url": "https://remote-h.firebaseio.com",
+    "project_id": "remote-h",
+    "storage_bucket": "remote-h.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:551868510150:android:6ca106ff2200cfe8798cc7",
+        "android_client_info": {
+          "package_name": "com.tigers.remote_h"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "551868510150-ojif878apvuesgc6egp6866ka6cktrom.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tigers.remote_h",
+            "certificate_hash": "73773553bedd7189e898f81fbc621c0e8e125ddb"
+          }
+        },
+        {
+          "client_id": "551868510150-nutje58scv8ah946r9f6qu0tf37l315o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoDewEHI5dq-mwb3NQWbTAN-bg07zvXDY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "551868510150-nutje58scv8ah946r9f6qu0tf37l315o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
