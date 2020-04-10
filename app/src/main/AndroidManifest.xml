@@ -10,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Environment"></activity>
+        <activity android:name=".HelpEnvironment"></activity>
+        <activity android:name=".Environment" />
         <activity android:name=".Statistics" />
         <activity android:name=".LoginActivity">
             <intent-filter>

@@ -41,10 +41,10 @@
 
         <GridLayout
             android:layout_width="match_parent"
-            android:layout_height="546dp"
+            android:layout_height="match_parent"
             android:alignmentMode="alignMargins"
             android:background="#36393F"
-            android:columnCount="2"
+            android:columnCount="1"
 
             android:columnOrderPreserved="true"
             android:rowCount="2">
@@ -59,7 +59,7 @@
                 app:cardElevation="6dp">
 
                 <LinearLayout
-                    android:id="@+id/environment"
+                    android:id="@+id/add_photo"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -67,20 +67,19 @@
                     android:padding="3dp">
 
                     <ImageView
-                        android:layout_width="120dp"
+                        android:layout_width="242dp"
                         android:layout_height="120dp"
-                        android:src="@mipmap/environment" />
+                        android:src="@mipmap/images" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
-                        android:text="Çalışma Ortamı"
+                        android:text="Bize Çalışma Masanızı Gönder!"
                         android:textColor="#6f6f6f"
                         android:textSize="18sp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -91,7 +90,7 @@
                 app:cardElevation="6dp">
 
                 <LinearLayout
-                    android:id="@+id/motivation"
+                    android:id="@+id/add_voice"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -99,20 +98,19 @@
                     android:padding="3dp">
 
                     <ImageView
-                        android:layout_width="120dp"
+                        android:layout_width="242dp"
                         android:layout_height="120dp"
-                        android:src="@mipmap/motivation" />
+                        android:src="@mipmap/add_voice" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
-                        android:text="Motivasyon"
+                        android:text="Ortam Sesini Ölç"
                         android:textColor="#6f6f6f"
                         android:textSize="18sp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -123,7 +121,7 @@
                 app:cardElevation="6dp">
 
                 <LinearLayout
-                    android:id="@+id/my_info"
+                    android:id="@+id/measure_intensity"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -131,51 +129,21 @@
                     android:padding="3dp">
 
                     <ImageView
-                        android:layout_width="120dp"
+                        android:layout_width="242dp"
                         android:layout_height="120dp"
-                        android:src="@mipmap/my_info" />
+                        android:src="@mipmap/intensity" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
-                        android:text="Bilgilerim"
+                        android:text="Ortam Işığını Ölç"
                         android:textColor="#6f6f6f"
                         android:textSize="18sp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_margin="10dp"
-                app:cardCornerRadius="18dp"
-                app:cardElevation="6dp">
 
-                <LinearLayout
-                    android:id="@+id/statistics"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="3dp">
-
-                    <ImageView
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
-                        android:src="@mipmap/statistics_chart" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:text="Gelişimlerim"
-                        android:textColor="#6f6f6f"
-                        android:textSize="18sp" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
 
         </GridLayout>
