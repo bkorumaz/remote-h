@@ -1,0 +1,17 @@
+package com.tigers.remote_h;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+
+public class Environment extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_environment);
+
+       // getActionBar().hide();
+
+    }
+}

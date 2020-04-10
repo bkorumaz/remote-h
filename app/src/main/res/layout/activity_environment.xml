@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/help_setUp_env"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp"
+        android:gravity="center|center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/ideal_working_env"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="210dp"
+            android:layout_height="180dp"
+            app:srcCompat="@mipmap/help_setup_env" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:gravity="center"
+            android:text="Çalışma Ortamınızı Birlikte Ayarlayalım!"
+            android:textSize="18dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ideal_working_env"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/did_you_know"
+        app:layout_constraintTop_toBottomOf="@+id/help_setUp_env"
+        tools:layout_editor_absoluteX="-29dp">
+
+        <ImageView
+            android:layout_width="210dp"
+            android:layout_height="180dp"
+            app:srcCompat="@mipmap/ideal_working_env" />
+
+        <TextView
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:gravity="center"
+            android:text="İdel Çalışma Ortamı"
+            android:textSize="18dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/did_you_know"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="30dp"
+        android:gravity="center|center_vertical"
+
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ideal_working_env"
+        tools:layout_editor_absoluteX="-48dp">
+
+        <ImageView
+            android:layout_width="210dp"
+            android:layout_height="180dp"
+            app:srcCompat="@mipmap/did_you_know" />
+
+        <TextView
+            android:layout_width="213dp"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="sans-serif-condensed-medium"
+            android:gravity="center"
+            android:text="Bunları Biliyor Musunuz?"
+            android:textSize="18dp" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
