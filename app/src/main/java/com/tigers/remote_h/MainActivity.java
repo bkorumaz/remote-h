@@ -1,11 +1,15 @@
 package com.tigers.remote_h;
 
+import android.app.Activity;
 import android.app.Notification;
+import android.content.Intent;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
@@ -21,13 +25,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_main);
         notificationManager = NotificationManagerCompat.from(this);
-        setContentView(R.layout.notifations_test);
+        setContentView(R.layout.activity_main);
         notifation_1=(Button)findViewById(R.id.button1);
         notifation_2=(Button)findViewById(R.id.button2);
         set_on_click_buttons();
     }
+
+    //set on click
     void set_on_click_buttons(){
-        notifation_1.setOnClickListener(new View.OnClickListener(){
+      /*  notifation_1.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
 
                 sendOnChannel1();
@@ -40,8 +46,20 @@ public class MainActivity extends AppCompatActivity {
                 sendOnChannel2();
             }
 
-        });
+        });*/
 
+
+        // set on click of statistick layout
+        LinearLayout layout = (LinearLayout)findViewById(R.id.statistics);
+        layout.setClickable(true);
+        layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,Statistics.class);
+                startActivity(intent);
+
+            }
+        });
     }
     public  void  sendOnChannel1()
     {
