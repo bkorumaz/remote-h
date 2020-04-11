@@ -12,12 +12,12 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
-public class ActivitySlider extends AppCompatActivity {
+public class QuoteActivity extends AppCompatActivity {
     private ViewPager mSlideViewPager;
     private LinearLayout mDotsLayout;
 
     private TextView[] mDots;
-    private SliderAdapter sliderAdapter;
+    private QuoteAdapter sliderAdapter;
 
     private Button mNextButton;
     private Button mBackButton;
@@ -28,12 +28,13 @@ public class ActivitySlider extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_slider);
+        Boolean isQuotes = getIntent().getBooleanExtra("isQuotes", true);
 
         mSlideViewPager = (ViewPager) findViewById(R.id.slideViewPager);
         mDotsLayout = (LinearLayout) findViewById(R.id.dotsLayout);
         mNextButton = findViewById(R.id.nextBtn);
         mBackButton = findViewById(R.id.backBtn);
-        sliderAdapter = new SliderAdapter(this);
+        sliderAdapter = new QuoteAdapter(this, isQuotes);
         mSlideViewPager.setAdapter(sliderAdapter);
 
         addDotsIndicator(0);
@@ -44,7 +45,7 @@ public class ActivitySlider extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(mCurrentPage==3){
-                    Intent intHome = new Intent(ActivitySlider.this, MainActivity.class);
+                    Intent intHome = new Intent(QuoteActivity.this, MainActivity.class);
                     startActivity(intHome);
                 } else {
                     mSlideViewPager.setCurrentItem(mCurrentPage+1);
@@ -103,7 +104,7 @@ public class ActivitySlider extends AppCompatActivity {
                 mBackButton.setEnabled(true);
                 mBackButton.setVisibility(View.VISIBLE);
 
-                mNextButton.setText("Geç");
+                mNextButton.setText("Son");
                 mBackButton.setText("Geri");
             } else {
                 mNextButton.setEnabled(true);

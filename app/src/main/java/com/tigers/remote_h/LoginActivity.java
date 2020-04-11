@@ -1,6 +1,5 @@
 package com.tigers.remote_h;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -91,7 +90,7 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Login Failed", Toast.LENGTH_SHORT).show();
                     _loginButton.setEnabled(true);
                 } else {
-                    Intent intHome = new Intent(LoginActivity.this, MainActivity.class);
+                    Intent intHome = new Intent(LoginActivity.this, ActivitySlider.class);
                     startActivity(intHome);
                     _loginButton.setEnabled(false);
                 }
@@ -103,17 +102,12 @@ public class LoginActivity extends AppCompatActivity {
             onLoginFailed();
         }
 
-        final ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this,
-                R.style.AppTheme);
-        progressDialog.setIndeterminate(true);
-        progressDialog.setMessage("Authenticating...");
-        progressDialog.show();
-
     }
 
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQUEST_SIGNUP) {
             if (resultCode == RESULT_OK) {
 

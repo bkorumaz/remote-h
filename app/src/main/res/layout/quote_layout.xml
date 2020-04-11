@@ -9,27 +9,29 @@
     <TextView
         android:id="@+id/quote"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="200dp"
         android:width="200dp"
+        android:fontFamily="@font/lobster_regular"
         android:gravity="center"
         android:padding="25dp"
         android:text="Kendini nasıl görüyorsan, başkaları da seni öyle görür."
+        android:textColor="@android:color/white"
         android:textSize="22dp"
-        android:fontFamily="@font/lobster_regular"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.65999997" />
 
     <ImageView
-        android:id="@+id/slide_image"
+        android:id="@+id/quote_img"
         android:layout_width="198dp"
         android:layout_height="178dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginBottom="35dp"
+        app:layout_constraintBottom_toTopOf="@+id/quote"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/image_1" />
+        app:srcCompat="@drawable/ic_format_quote_black_24dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

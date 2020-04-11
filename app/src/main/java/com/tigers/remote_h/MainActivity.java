@@ -34,6 +34,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        LinearLayout motivation_layout = (LinearLayout)findViewById(R.id.motivation);
+        motivation_layout.setClickable(true);
+        motivation_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,QuoteActivity.class);
+                intent.putExtra("isQuotes", false);
+                startActivity(intent);
+            }
+        });
 
     }
 

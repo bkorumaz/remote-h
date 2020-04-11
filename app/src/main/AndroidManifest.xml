@@ -10,8 +10,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ResultEnvironment"></activity>
+        <activity android:name=".ResultEnvironment"/>
         <activity android:name=".HelpEnvironment" />
+        <activity android:name=".QuoteActivity"></activity>
         <activity android:name=".Environment" />
         <activity android:name=".Statistics" />
         <activity android:name=".MainActivity">

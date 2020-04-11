@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@drawable/gradient_main"
+    android:background="@drawable/gradient_background"
     >
 
     <LinearLayout
@@ -18,7 +18,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#2F3136">
+                android:background="@drawable/gradient_navbar">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -79,7 +79,7 @@
                     <ImageView
                         android:layout_width="120dp"
                         android:layout_height="120dp"
-                        android:src="@mipmap/environment" />
+                        android:src="@drawable/ic_environemnt" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -112,7 +112,7 @@
                     <ImageView
                         android:layout_width="120dp"
                         android:layout_height="120dp"
-                        android:src="@mipmap/motivation" />
+                        android:src="@drawable/ic_motivation" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -145,7 +145,7 @@
                     <ImageView
                         android:layout_width="120dp"
                         android:layout_height="120dp"
-                        android:src="@mipmap/my_info" />
+                        android:src="@drawable/ic_checklist" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -179,7 +179,7 @@
                     <ImageView
                         android:layout_width="120dp"
                         android:layout_height="120dp"
-                        android:src="@mipmap/statistics_chart" />
+                        android:src="@drawable/ic_graph" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -190,8 +190,6 @@
                         android:textSize="18sp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
-
         </GridLayout>
     </LinearLayout>
 
