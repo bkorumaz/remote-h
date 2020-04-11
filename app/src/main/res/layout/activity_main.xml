@@ -51,7 +51,7 @@
             android:layout_width="match_parent"
             android:layout_height="545dp"
             android:alignmentMode="alignMargins"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="30dp"
             android:columnCount="2"
             android:columnOrderPreserved="true"
             android:background="@android:color/transparent"
@@ -151,7 +151,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
-                        android:text="Bilgilerim"
+                        android:text="Bugünü Puanla"
                         android:textColor="#2F3136"
                         android:textSize="18sp" />
                 </LinearLayout>

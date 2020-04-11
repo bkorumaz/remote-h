@@ -31,10 +31,10 @@ public class QuoteAdapter extends PagerAdapter {
             "Bir araya gelmek bir başlangıçtır; bir arada tutmak ilerlemedir; birlikte çalışmak başarıdır.\n" +"-Edward Everett Hale",
    };
     public String [] facts = {
-            "Bilgi 1",
+            "Apple bilgisayarların yakınında sigara içmek bilgisayarın garantisinin geçersiz kılınmasına sebep olabilir ",
             "Uyuyarak kalorilerinizden kurtulun. Yani geç saatlere kadar oturup TV izlemek yerine normal saatlerde uyursanız, diğer seçeneğe göre çok daha fazla kalori harcarsınız",
             "İnsan beyni sabahları bilgi, akşamları ise duygu ve yaratıcılık ağırlıklı çalışır.",
-            "Bilgi 4",
+            "Prizden fişi sağ elinizle çekin. Olası bir çarpılma anında sol elden giren elektrik daha ölümcüldür.",
     };
 
     @Override

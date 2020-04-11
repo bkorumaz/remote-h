@@ -8,9 +8,43 @@
     tools:context=".HelpEnvironment"
     android:background="#2F3136"
     >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_navbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/jim_carrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center_vertical"
+                android:text="Orhan Özalp"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp" />
 
 
-
+        </RelativeLayout>
+    </LinearLayout>
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -158,9 +192,6 @@
             android:textColor="#FFFFFF"
             android:textSize="20sp" />
 
-
-
-    </GridLayout>
-
-
+        </GridLayout>
+    </LinearLayout>
 </ScrollView>
