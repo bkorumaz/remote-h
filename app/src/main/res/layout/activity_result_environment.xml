@@ -5,11 +5,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HelpEnvironment"
+    tools:context=".ResultEnvironment"
+    tools:actionBarNavMode="standard"
     android:background="#2F3136"
     >
-
-
 
     <GridLayout
         android:layout_width="match_parent"
@@ -18,7 +17,7 @@
         android:background="#36393F"
         android:columnCount="1"
         android:columnOrderPreserved="true"
-        android:rowCount="4">
+        android:rowCount="3">
         <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -36,28 +35,40 @@
                 android:orientation="vertical"
                 android:padding="3dp">
 
-                <ImageView
-                    android:layout_width="242dp"
-                    android:layout_height="120dp"
-                    android:src="@mipmap/images" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
-                    android:text="Çalışma Masasının Fotoğrafını Ekle"
+                    android:text="İdeal Masa Düzeni"
                     android:textColor="#6f6f6f"
                     android:textSize="18sp" />
 
+                <RatingBar
+                    android:id="@+id/table_rate"
+                    style="@style/customRatingBar"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="61dp"
+                    android:layout_marginRight="0dp"
+                    android:background="#0f0"
+                    android:numStars="5"
+                    android:stepSize="0.1"
+                    android:rating="2.1"
+
+                    />
+
                 <TextView
-                    android:id="@+id/photo_name"
+                    android:id="@+id/ideal_table_info"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
-                    android:fontFamily="sans-serif-condensed-medium"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Puanınız: 2.1/5"
+                    android:textColor="#D82828"
+                    android:textSize="20sp" />
 
-                    android:textColor="#FF0000"
-                    android:textSize="12sp" />
+
+
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
@@ -71,40 +82,47 @@
             app:cardElevation="6dp">
 
             <LinearLayout
-
-                android:id="@+id/add_voice"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="3dp">
 
-                <ImageView
-
-                    android:layout_width="242dp"
-                    android:layout_height="120dp"
-
-                    android:src="@mipmap/add_voice" />
 
                 <TextView
+
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
-                    android:text="Ortam Sesini Ölç"
+                    android:text="İdeal Ortam Sesi"
                     android:textColor="#6f6f6f"
                     android:textSize="18sp" />
 
+                <RatingBar
+                    android:id="@+id/voice_rate"
+                    style="@style/customRatingBar"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="61dp"
+
+                    android:background="#0f0"
+                    android:numStars="5"
+                    android:rating="3.5"
+                    />
+
                 <TextView
-                    android:id="@+id/record_voice_text"
+                    android:id="@+id/ideal_voice_info"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
-                    android:textColor="#EC3D79"
-                    android:textSize="12sp" />
+                    android:fontFamily="sans-serif-black"
+                    android:text="Puanınız:3.5/5"
+                    android:textColor="#96FF14"
+                    android:textSize="20sp" />
+
+
             </LinearLayout>
+
         </androidx.cardview.widget.CardView>
-
-
         <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -112,55 +130,61 @@
             android:layout_columnWeight="1"
             android:layout_margin="10dp"
             app:cardCornerRadius="18dp"
-
             app:cardElevation="6dp">
 
             <LinearLayout
-                android:id="@+id/measure_intensity"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="3dp">
 
-                <ImageView
-                    android:layout_width="242dp"
-                    android:layout_height="120dp"
-                    android:src="@mipmap/intensity" />
 
                 <TextView
+
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
-                    android:text="Ortam Işığını Ölç"
+                    android:text="İdeal Ortam Işıklandırması"
                     android:textColor="#6f6f6f"
                     android:textSize="18sp" />
+
+                <RatingBar
+                    android:id="@+id/lighting_rate"
+                    style="@style/customRatingBar"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="61dp"
+
+                    android:background="#0f0"
+                    android:numStars="5"
+                    android:rating="4.5" />
+
+                <TextView
+                    android:id="@+id/ideal_lighting_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Puanınız:4.5/5"
+                    android:textColor="#30F634"
+                    android:textSize="20sp" />
+
+
             </LinearLayout>
+
         </androidx.cardview.widget.CardView>
 
-
-        <Button
-            android:id="@+id/push_env_info"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_gravity="center"
-            android:layout_margin="10dp"
-            android:background="@drawable/buttonshape"
-            android:fontFamily="sans-serif-black"
-
-            android:gravity="center"
-            android:shadowColor="#A8A8A8"
-            android:shadowDx="0"
-            android:shadowDy="0"
-
-            android:shadowRadius="5"
-            android:text="Ortam Bilgilerinizi Gönderin"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp" />
 
 
 
     </GridLayout>
+
+
+
+
+
+
+
 
 
 </ScrollView>

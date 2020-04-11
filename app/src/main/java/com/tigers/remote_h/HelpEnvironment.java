@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -19,11 +20,13 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Environment;
+import android.os.Handler;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -49,7 +52,6 @@ public class HelpEnvironment extends AppCompatActivity {
         setContentView(R.layout.activity_help_environment);
         set_on_clicks();
 
-
     }
 
     void set_on_clicks() {
@@ -67,6 +69,28 @@ public class HelpEnvironment extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 record_voice();
+            }
+        });
+      push_env_info.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                ProgressDialog progressDialog = new ProgressDialog(HelpEnvironment.this);
+                progressDialog.setMessage("Ortam Bilgileri İşleniyor. Lütfen bekleyiniz..");
+                progressDialog.show();
+
+
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        if (progressDialog != null && progressDialog.isShowing()) {
+                            progressDialog.dismiss();
+                            Intent intent = new Intent(HelpEnvironment.this,ResultEnvironment.class);
+                            startActivity(intent);
+                        }
+                        
+                    }
+                },5000);
             }
         });
 
