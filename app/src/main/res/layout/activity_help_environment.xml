@@ -8,36 +8,7 @@
     tools:context=".MainActivity"
     android:background="#2F3136"
     >
-    <LinearLayout
-        android:background="#2F3136"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginRight="20dp">
-
-            <ImageView
-                android:layout_width="62dp"
-                android:layout_height="62dp"
-                android:layout_alignParentRight="true"
-                android:src="@mipmap/jim_carrey" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="62dp"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:gravity="center_vertical"
-                android:text="Orhan Özalp"
-                android:textColor="#FFFFFF"
-                android:textSize="25sp" />
-
-
-        </RelativeLayout>
 
         <GridLayout
             android:layout_width="match_parent"
@@ -47,7 +18,7 @@
             android:columnCount="1"
 
             android:columnOrderPreserved="true"
-            android:rowCount="2">
+            android:rowCount="4">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
@@ -75,7 +46,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="6dp"
-                        android:text="Bize Çalışma Masanızı Gönder!"
+                        android:text="Çalışma Masasının Fotoğrafını Ekle"
                         android:textColor="#6f6f6f"
                         android:textSize="18sp" />
 
@@ -112,6 +83,7 @@
 
                         android:layout_width="242dp"
                         android:layout_height="120dp"
+
                         android:src="@mipmap/add_voice" />
 
                     <TextView
@@ -127,9 +99,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="6dp"
-                        android:text="Kayıt Alınıyor.. 10"
-                        android:textColor="#FF0057"
-                        android:textSize="18sp" />
+                        android:textColor="#EC3D79"
+                        android:textSize="12sp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
@@ -139,6 +110,7 @@
                 android:layout_columnWeight="1"
                 android:layout_margin="10dp"
                 app:cardCornerRadius="18dp"
+
                 app:cardElevation="6dp">
 
                 <LinearLayout
@@ -164,10 +136,40 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+            <androidx.cardview.widget.CardView
+                android:id="@+id/push_env_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="6dp">
 
+                <Button
+                    android:id="@+id/angry_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/buttonshape"
+                    android:fontFamily="sans-serif-black"
+
+                    android:gravity="center"
+                    android:shadowColor="#A8A8A8"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+
+                    android:shadowRadius="5"
+                    android:text="Ortam Bilgilerinizi Gönderin"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+
+
+            </androidx.cardview.widget.CardView>
 
 
         </GridLayout>
-    </LinearLayout>
+
 
 </ScrollView>

@@ -3,6 +3,7 @@
     package="com.tigers.remote_h">
     <uses-feature android:name="android.hardware.camera"
         android:required="true" />
+    <uses-permission android:name="android.Manifest.permission.RECORD_AUDIO"/>
 
     <application
         android:name=".Notifications"

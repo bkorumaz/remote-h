@@ -1,15 +1,26 @@
 package com.tigers.remote_h;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
+import android.Manifest;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
+import android.media.MediaPlayer;
+import android.media.MediaRecorder;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -19,19 +30,30 @@ import android.widget.Toast;
 import org.w3c.dom.Text;
 
 import java.io.File;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class HelpEnvironment extends AppCompatActivity {
-    Uri mUri;
+    private static final int REQUEST_RECORD_AUDIO_PERMISSION = 200;
+
+    private MediaRecorder recorder = null;
+    private MediaPlayer player = null;
+    private String [] permissions = {Manifest.permission.RECORD_AUDIO};
+    private boolean permissionToRecordAccepted = false;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_help_environment);
         set_on_clicks();
+
+
     }
 
     void set_on_clicks() {
+        Button push_env_info=(Button)findViewById(R.id.push_env_info);
         LinearLayout add_photo = (LinearLayout) findViewById(R.id.add_photo);
         LinearLayout add_voice = (LinearLayout) findViewById(R.id.add_voice);
         LinearLayout measure_intensity = (LinearLayout) findViewById(R.id.measure_intensity);
@@ -49,9 +71,86 @@ public class HelpEnvironment extends AppCompatActivity {
         });
 
     }
-    void record_voice()
+
+
+
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        if (recorder != null) {
+            recorder.release();
+            recorder = null;
+        }
+        if (player != null) {
+            player.release();
+            player = null;
+        }
+    }
+    void  startRecord(){
+        recorder=new MediaRecorder();
+        recorder.setAudioSource(MediaRecorder.AudioSource.MIC);
+        recorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
+        recorder.setOutputFile("test");
+        recorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
+
+        try {
+            recorder.prepare();
+        } catch (IOException e) {
+
+        }
+        recorder.start();
+
+    }
+        void record_voice()
     {
-        //TextView record_voice_text =(TextView)findViewById(R.)
+        AlertDialog.Builder builder1 = new AlertDialog.Builder(HelpEnvironment.this);
+        builder1.setMessage("Lütfen daha doğru sonuçlar için kayıt esnasında sessiz olunuz!");
+        builder1.setCancelable(true);
+        builder1.setIcon(android.R.drawable.ic_dialog_alert);
+        builder1.setPositiveButton(
+                "Başla",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        TextView record_voice_text =(TextView)findViewById(R.id.record_voice_text);
+                        record_voice_text.setText("Kayıt Alınıyor..10");
+
+                        //startRecord();
+
+                        new CountDownTimer(10000,1000) {
+                            @Override
+                            public void onTick(long l) {
+
+                                record_voice_text.setText("Kayıt Alınıyor..."+Long.toString(l/1000));
+
+                            }
+
+                            @Override
+                            public void onFinish() {
+                                record_voice_text.setTextColor(Color.parseColor("#FF0000"));
+                                SimpleDateFormat date= new SimpleDateFormat("MM-dd-yyyy HH:mm:ss" );
+                                Calendar calendar=Calendar.getInstance();
+                                String[] taken_date=date.format(calendar.getTime()).split(" ");
+                                String fileName = taken_date[0]+"_"+taken_date[1]+ ".wav";
+                                record_voice_text.setText(fileName);
+                            }
+                        }.start();
+                    }
+                });
+
+        builder1.setNegativeButton(
+                "Çıkış",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
+
+        AlertDialog alert11 = builder1.create();
+        alert11.show();
+
+
+
 
     }
 
