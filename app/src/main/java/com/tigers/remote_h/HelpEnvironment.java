@@ -137,7 +137,7 @@ public class HelpEnvironment extends AppCompatActivity {
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         TextView record_voice_text =(TextView)findViewById(R.id.record_voice_text);
-                        record_voice_text.setText("Kayıt Alınıyor..10");
+                        record_voice_text.setText("Ses Kaydediliyor..10");
 
                         //startRecord();
 
@@ -145,7 +145,7 @@ public class HelpEnvironment extends AppCompatActivity {
                             @Override
                             public void onTick(long l) {
 
-                                record_voice_text.setText("Kayıt Alınıyor..."+Long.toString(l/1000));
+                                record_voice_text.setText("Ses Kaydediliyor.."+Long.toString(l/1000));
 
                             }
 
@@ -157,6 +157,7 @@ public class HelpEnvironment extends AppCompatActivity {
                                 String[] taken_date=date.format(calendar.getTime()).split(" ");
                                 String fileName = taken_date[0]+"_"+taken_date[1]+ ".wav";
                                 record_voice_text.setText(fileName);
+                                Toast.makeText(HelpEnvironment.this,"Ses Başarıyla Kaydedildi",Toast.LENGTH_SHORT).show();
                             }
                         }.start();
                     }
@@ -189,7 +190,6 @@ public class HelpEnvironment extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 12) {
-            Toast.makeText(HelpEnvironment.this, "filename", Toast.LENGTH_LONG).show();
 
             if (resultCode == RESULT_OK) {
                     SimpleDateFormat date= new SimpleDateFormat("MM-dd-yyyy HH:mm:ss" );
