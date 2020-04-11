@@ -12,7 +12,8 @@
         android:theme="@style/AppTheme">
         <activity android:name=".ResultEnvironment"/>
         <activity android:name=".HelpEnvironment" />
-        <activity android:name=".QuoteActivity"></activity>
+        <activity android:name=".QuoteActivity"/>
+        <activity android:name=".ActivitySlider"/>
         <activity android:name=".Environment" />
         <activity android:name=".Statistics" />
         <activity android:name=".MainActivity">

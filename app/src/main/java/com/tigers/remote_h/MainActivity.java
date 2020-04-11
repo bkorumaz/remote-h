@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
                  startActivity(intent);
             }
         });
+
         LinearLayout environment_layout = (LinearLayout)findViewById(R.id.environment);
         environment_layout.setClickable(true);
         environment_layout.setOnClickListener(new View.OnClickListener() {
@@ -34,13 +35,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         LinearLayout motivation_layout = (LinearLayout)findViewById(R.id.motivation);
         motivation_layout.setClickable(true);
         motivation_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,QuoteActivity.class);
-                intent.putExtra("isQuotes", false);
+                intent.putExtra("isQuotes", true);
                 startActivity(intent);
             }
         });

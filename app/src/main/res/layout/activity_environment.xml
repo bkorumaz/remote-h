@@ -6,46 +6,53 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#2F3136"
+    android:background="@drawable/gradient_background"
     >
     <LinearLayout
-        android:background="#2F3136"
         android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginRight="20dp">
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient_navbar">
 
-            <ImageView
-                android:layout_width="62dp"
-                android:layout_height="62dp"
-                android:layout_alignParentRight="true"
-                android:src="@mipmap/jim_carrey" />
-
-            <TextView
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="62dp"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:gravity="center_vertical"
-                android:text="Orhan Özalp"
-                android:textColor="#FFFFFF"
-                android:textSize="25sp" />
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp">
+
+                <ImageView
+                    android:layout_width="62dp"
+                    android:layout_height="62dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/jim_carrey" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:gravity="center_vertical"
+                    android:text="Orhan Özalp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="25sp" />
 
 
-        </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
 
         <GridLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:alignmentMode="alignMargins"
-            android:background="#36393F"
             android:columnCount="1"
-
+            android:background="@android:color/transparent"
+            android:layout_marginTop="10dp"
             android:columnOrderPreserved="true"
             android:rowCount="3">
 
@@ -91,7 +98,7 @@
                 app:cardElevation="6dp">
 
                 <LinearLayout
-                    android:id="@+id/motivation"
+                    android:id="@+id/ideal_working_env"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -123,7 +130,7 @@
                 app:cardElevation="6dp">
 
                 <LinearLayout
-                    android:id="@+id/my_info"
+                    android:id="@+id/did_you_know"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
