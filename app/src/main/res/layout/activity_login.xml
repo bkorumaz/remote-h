@@ -39,7 +39,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="E-posta"
-                android:inputType="textEmailAddress" />
+                android:inputType="textEmailAddress"
+                android:textColor="#FFFFFF" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <!--  Password Label -->
@@ -54,7 +55,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Şifre"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:textColor="@android:color/white" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
