@@ -16,7 +16,8 @@
         <activity android:name=".ActivitySlider"/>
         <activity android:name=".Environment" />
         <activity android:name=".Statistics" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
