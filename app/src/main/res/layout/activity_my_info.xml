@@ -1,9 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MyInfo">
+    tools:context=".ResultEnvironment"
+    tools:actionBarNavMode="standard"
+    android:background="#2F3136"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient_navbar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp">
+
+                <ImageView
+                    android:layout_width="62dp"
+                    android:layout_height="62dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/jim_carrey" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:gravity="center_vertical"
+                    android:text="Orhan Özalp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="25sp" />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alignmentMode="alignMargins"
+            android:layout_marginTop="40dp"
+            android:background="#36393F"
+            android:columnCount="1"
+            android:columnOrderPreserved="true"
+            android:rowCount="3">
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="6dp">
+
+                <LinearLayout
+                    android:id="@+id/add_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="3dp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="Gününüz Nasıl Geçti ?"
+                        android:textColor="#6f6f6f"
+                        android:textSize="20sp" />
+
+                    <RatingBar
+                        android:id="@+id/day_rate"
+                        style="@style/customRatingBar"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="61dp"
+                        android:layout_marginRight="0dp"
+                        android:background="#0f0"
+                        android:numStars="5"
+                        android:stepSize="0.1"
+                        android:rating="2.1"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/rating_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-black"
+                        android:text="Puanınız: 2.1/5"
+                        android:textColor="#D82828"
+                        android:textSize="20sp" />
+                    <Button
+                        android:id="@+id/day_"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/buttonshape"
+                        android:fontFamily="sans-serif-black"
+
+                        android:gravity="center"
+                        android:shadowColor="#A8A8A8"
+                        android:shadowDx="0"
+                        android:shadowDy="0"
+
+                        android:shadowRadius="5"
+                        android:text="Gününüzü Değerlendirin"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </GridLayout>
+    </LinearLayout>
+</ScrollView>

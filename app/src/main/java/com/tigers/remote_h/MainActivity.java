@@ -46,6 +46,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        LinearLayout my_info_layout = (LinearLayout)findViewById(R.id.my_info);
+        my_info_layout.setClickable(true);
+        my_info_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,MyInfo.class);
+                startActivity(intent);
+            }
+        });
 
     }
 

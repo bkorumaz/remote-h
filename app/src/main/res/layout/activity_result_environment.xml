@@ -204,7 +204,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-black"
                     android:text="Puanınız:4.5/5"
-                    android:textColor="#30F634"
+                    android:textColor="#82B883"
                     android:textSize="20sp" />
 
 
